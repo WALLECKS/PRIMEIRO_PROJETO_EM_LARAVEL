@@ -28,6 +28,9 @@
             </tr> 
         </thead>     
         <tbody class="bg-slate-300">
+<!--
+    passando a variavel $datas do controller para visualizaçao na view
+-->
             @foreach ($datas as $data)
             <td class="border border-slate-700 ... bg-slate-300">{{$data->name}}</td>
             <td class="border border-slate-700 ... bg-slate-300">{{$data->sobrenome}}</td>
@@ -35,7 +38,7 @@
             <td class="border border-slate-700 ... bg-slate-300">{{$data->cpf}}</td>
             <tbody>
                 <td>
-                    <form action="{{route('delete.delete',$data->id)}}" method="post">
+                    <form action="{{route('delete.delete',$data->id)}}" method="post"> 
                         @method('delete')
                         @csrf
                          <button type="submit" class="shadow-2xl ... outline outline-offset-2 outline-red-800 px-3 ..." title="click 2 vezes para excluir o registro">
