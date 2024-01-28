@@ -26,8 +26,8 @@ class ValidateControllerTeste extends FormRequest
         return [
             'cpf'=>[
                 'required',
-                'min:11',
-                'max:11',
+                'min:14',
+                'max:14',
                 'unique: user'
             ],
         ];

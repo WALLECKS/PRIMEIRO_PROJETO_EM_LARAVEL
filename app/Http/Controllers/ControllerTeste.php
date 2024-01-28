@@ -17,9 +17,11 @@ class ControllerTeste extends Controller
     }
 
 // abaixo segue a rota responsavel por cadastras novas informaçoes no banco de dados
-    public function cadastro(ValidateControllerTeste $request) // injeçao de dependencias       
+    public function cadastro(Request $request) // injeçao de dependencias       
     { 
+
        $user= $request->all(); // recupera as informaçoes 
+       
        User::create($user); // cria uma nova informaçao no banco de dados)
        
        return view('welcome');

@@ -13,7 +13,7 @@
     TITLE
 -->
         <div class="bg-slate-300 ">
-            <h1 class="text-3xl" align="center"><font face="arial"> <b class="text-slate-400">PAGINA INICIAL</b> </font></h1>
+            <h1 class="text-3xl" align= "center"><font face="arial"> <b class="text-slate-400">PAGINA INICIAL</b> </font></h1>
         </div>
 <!--
     ROUTES
