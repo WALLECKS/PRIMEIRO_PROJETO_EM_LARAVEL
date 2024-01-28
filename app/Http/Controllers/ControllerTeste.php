@@ -32,12 +32,12 @@ class ControllerTeste extends Controller
         return view('/tela_cadastro_clientes.cadastro');
     }
 // abaixo a rota que deleta um registro
-    public function delete(User $datas,int $id)
+    public function delete(User $datas, int $id)
     {  
         $datas= $datas->all();
         if(!$registro = User::where('id',$id)->first())
         {
-            return redirect()->route('registro.registro');
+            return redirect()->back();
         }
         $registro->delete();
         return view('lista_contatos.registros',compact('datas'));
