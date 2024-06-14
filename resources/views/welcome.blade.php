@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/app.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Pagina Inicial</title>
 </head>
@@ -22,8 +23,10 @@
             <nav>
                 <table cellpadding="20%">
                         <tr >
-                            <th><a class="no-underline hover:underline ... " href="{{route('cadastro_clientes.Formulario_Cadastro_Clientes')}}"><b>Cadastro de Clientes</b></a></th>
-                            <th><a class="no-underline hover:underline ..." href="{{route('registro.registro')}}"><b> Registros </b></a></th>
+                            <th><a class="no-underline hover:underline ... " href="{{route('cadastro_clientes.Formulario_Cadastro_Clientes')}}"><b>Cadastro de Produtos</b></a></th>
+                            <th><a class="no-underline hover:underline ..." href="{{route('Cadastro_Categoria.Cadastro_Categoria')}}"><b> Cadastro de Categorias </b></a></th>
+                            <th><a class="no-underline hover:underline ..." href="{{route('registro.registro')}}"><b> Produtos Cadastrados </b></a></th>
+                            <th><a class="no-underline hover:underline ..." href="{{route('listar_categorias.Categoria_Product')}}"><b> Categorias Cadastradas </b></a></th>
                         </tr>       
                 </table>
         </nav>

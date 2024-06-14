@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ValidateControllerTeste extends FormRequest
+class ValidaçaoCadastroCategorias extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,23 +24,11 @@ class ValidateControllerTeste extends FormRequest
     public function rules()
     {
         return [
-            'name'=>[
+          'categorias'=>[
                 'required',
-                'min:14',
-                'max:30',
-                'unique: user'
-            ],
-            'descriçao'=>[
-                'nullable',
-                'min:7',
+                'min:5',
                 'max:20',
             ],
-            'preço'=>[
-                'required',
-                'min:2',
-                'max:2',
-            ],
-            
         ];
     }
 }

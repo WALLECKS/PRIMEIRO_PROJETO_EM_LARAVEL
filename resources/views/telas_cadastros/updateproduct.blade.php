@@ -11,9 +11,9 @@
 </head>
 <body class=""> <!-- cor do body-->
     <div class="shadow-md ... bg-slate-600"> <!-- cor do titulo-->
-        <h1 align="center"> <font color="white" size="10%"><b> CADASTRO DE CLIENTES </b></font></h1> <!-- TITULO -->
+        <h1 align="center"> <font color="white" size="10%"><b> ATUALIZAR INFORMAÇOES </b></font></h1> <!-- TITULO -->
     </div>
-<!--================================== ABAIXO OS ERROS DE FORMUALARIOS ==============================-->
+<!--================================== ABAIXO OS ERROS DE FORMUALARIOS NAO PREENCHIDOS ==============================-->
 
     @if($errors->any())
     
@@ -25,38 +25,36 @@
     
 
     @endif
-   
+<!--================================== FORMULARIO DE ATUALIZAÇAO ==============================-->
         <div  align="center" class="shadow-md ... " ><!-- centraliza formulario -->
             
-            <form action="{{route('cadastro.cadastro')}}" method="post" class="bg-slate-300">
+            <form action="{{route('update.update', $data->id)}}" method="post" class="bg-slate-300">
                 @csrf
-                
+                @method('put')
                 <div class="space-y-12"> <!-- espaçamento entre inputs -->
                             <font color="#0c0a09"> <!-- cor do texto-->
-                               <font color="red">*</font><b>NOME:</b>
-                            </font><input type="text" name="name" class="border-2 border-rose-500 ..." placeholder="insira seu nome" size="30px">
+                               <font color="red">*</font><b>Nome do produto:</b>
+                            </font><input type="text" name="name" class="border-2 border-rose-500 ..." placeholder="informe o nome do produto" size="30px" value="{{$data->name}}">
                             <font color="#0c0a09"> <!-- cor do texto-->
-                                <font color="red">*</font><b>SOBRENOME:</b>
-                            </font><input type="text" name="sobrenome" class="border-2 border-rose-500 ..." placeholder="insira o seu sobrenome" size="25px"> 
+                                <font color="red">*</font><b>Descrição:</b>
+                            </font><input type="text" name="descriçao" class="border-2 border-rose-500 ..." placeholder="descrição do produto" size="25px" value="{{$data->descriçao}}"> 
                             <font color="#0c0a09"> <!-- cor do texto-->
-                                <font color="red">*</font><b>IDADE:</b>
-                            </font><input type="number" name="idade" placeholder="insira o sua idade" class="border-2 border-rose-500 ..." size="15px"> 
+                                <font color="red">*</font><b>Preço:</b>
+                            </font><input type="number" name="preço" placeholder="valor do produto" class="border-2 border-rose-500 ..." size="15px" value="{{$data->preço}}"> 
+                           
                             <font color="#0c0a09"> <!-- cor do texto-->
-                                <font color="red">*</font><b>CPF:</b>
-                            </font><input type="cpf" pattern="\d{3}.\d{3}.\d{3}-\d{2}$" name="cpf" placeholder="___.___.___-__"  class="border-2 border-rose-500 ..." title="informe os pontos e o traço a cada valor"> 
+                                <font color="red">*</font><b>Data de Criaçao:</b>
+                            </font><input type="date" name="created_at" placeholder=" data de criação" class="border-2 border-rose-500 ..." value="{{$data->created_at}}"> 
                             <font color="#0c0a09"> <!-- cor do texto-->
-                                <font color="red">*</font><b>DATA:</b>
-                            </font><input type="date" name="created_at" placeholder=" informe a data" class="border-2 border-rose-500 ..."> 
-                            <font color="#0c0a09"> <!-- cor do texto-->
-                                <font color="red">*</font><b>HORA:</b>
-                            </font><input type="datetime-local" name="updated_at" placeholder=" informe a HORA" class="border-2 border-rose-500 ..."> <br>
+                                <font color="red">*</font><b>Data/Hora de criação:</b>
+                            </font><input type="datetime-local" name="updated_at" placeholder=" data/hora" class="border-2 border-rose-500 ..."> <br>
                             
                          
                                 <button type="submit" class="bg-sky-500/100 ... " >
                                     <font color="white"> <!-- cor do texto-->
                                         <p class="font-mono ... border-2"> 
                                             <b> 
-                                                cadastrar
+                                                atualizar
                                             </b>
                                         </p>
                                     </font>
