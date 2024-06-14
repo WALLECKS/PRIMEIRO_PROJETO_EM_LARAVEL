@@ -13,7 +13,9 @@
     <div class="shadow-md ... bg-slate-600"> <!-- cor do titulo-->
         <h1 align="center"> <font color="white" size="10%"><b> ATUALIZAÇÃO CADASTRAL DE CATEGORIAS DE PRODUTOS </b></font></h1> <!-- TITULO -->
     </div>
-<!--================================== ABAIXO OS ERROS DE FORMUALARIOS NAO PREENCHIDOS==============================-->
+<!--
+ ABAIXO OS ERROS DE FORMUALARIOS NAO PREENCHIDOS
+-->
 
     @if($errors->any())
     
@@ -21,11 +23,11 @@
             <ul>
                 <li>{{$error}}</li>
             </ul>
-        @endforeach
-    
-
+        @endforeach   
     @endif
-   
+<!--
+    formulario de cadastro 
+-->   
         <div  align="center" class="shadow-md ... " ><!-- centraliza formulario -->
             
             <form action="{{route('Cadastro.Update_Category2',$category_model->id)}}" method="post" class="bg-slate-300">
@@ -42,7 +44,7 @@
                            
                             <font color="#0c0a09"> <!-- cor do texto-->
                                 <font color="red">*</font><b>DATA/HORA de Criação:</b>
-                            </font><input type="datetime-local" name="created_at    " placeholder=" informe a HORA" class="border-2 border-rose-500 ..."> <br>
+                            </font><input type="datetime-local" name="created_at v" placeholder=" informe a HORA" class="border-2 border-rose-500 ..." > <br>
                             
                          
                                 <button type="submit" class="bg-sky-500/100 ... " >
@@ -53,8 +55,16 @@
                                             </b>
                                         </p>
                                     </font>
-                                </button> <br><br>
+                                </button> <br>
                 </div> <!-- fim do espaçamento entre inputs-->   
+<!--============================================================= TEXTO INFORMATIVO ===========================================-->
+                <h4 ><font color="red"><b>*</b></font> informe todos os valores dos campos abaixo
+                    <ol>
+                        <li>nome da categoria</li>
+                        <li>data de criação</li>
+                        <li>data/hora de criação</li>
+                    </ol>
+                </h4>
            </form><!-- FIM DO FORMULARIO -->
        
         </div><!-- fim da centralizaçao dos inputs-->       

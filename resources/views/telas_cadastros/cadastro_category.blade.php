@@ -13,17 +13,20 @@
     <div class="shadow-md ... bg-slate-600"> <!-- cor do titulo-->
         <h1 align="center"> <font color="white" size="10%"><b> CADASTRO DE CATEGORIAS DE PRODUTOS </b></font></h1> <!-- TITULO -->
     </div>
-<!--================================== ABAIXO OS ERROS DE FORMUALARIOS NAO PREENCHIDOS==============================-->
+<!--
+     ABAIXO OS ERROS DE FORMUALARIOS NAO PREENCHIDOS
+-->
 
-    @if($errors->any())
+@if($errors->any())
     <ul>
         @foreach ($errors->all() as $error)
                 <li>{{$error}}</li>
         @endforeach
     </ul>
-
-    @endif
-   
+@endif()
+<!--
+ FOMULARIO DE CADASTRO DE INFORMAÇAO
+-->   
         <div  align="center" class="shadow-md ... " ><!-- centraliza formulario -->
             
             <form action="{{route('Cadastro.Create_Category')}}" method="post" class="bg-slate-300">
@@ -51,10 +54,19 @@
                                             </b>
                                         </p>
                                     </font>
-                                </button> <br><br>
-                </div> <!-- fim do espaçamento entre inputs-->   
+                                </button> <br>
+                </div> <!-- fim do espaçamento entre inputs-->
+
+<!--========================================== texto informativo=============================================-->
+                <h4 ><font color="red"><b>*</b></font> informe todos os valores dos campos abaixo
+                    <ol>
+                        <li>nome da categoria</li>
+                        <li>data de criação</li>
+                        <li>data/hora de criação</li>
+                    </ol>
+                </h4>
+            <br>   
            </form><!-- FIM DO FORMULARIO -->
-       
         </div><!-- fim da centralizaçao dos inputs-->       
             
 </body>

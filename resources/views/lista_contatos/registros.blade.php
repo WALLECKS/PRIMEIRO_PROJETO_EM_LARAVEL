@@ -14,7 +14,7 @@
     </div>
     
         <form action="{{route('cadastro_clientes.Formulario_Cadastro_Clientes')}}" method="GET">
-            <button type="submit"> cadastrar mais produtos </button>
+            <button type="submit" class="bg-indigo-500 opacity-70 ..."> <p class="font-mono ... border-4">cadastrar mais produtos</p></button>
         </form>
        
     </div>     
@@ -37,12 +37,13 @@
         <tbody class="bg-slate-300">
 <!--
     passando a variavel $datas do controller para visualizaçao na view
+    juntamente com o formulario de exclusao, atualização e detalhes das
+    informaçoes cadastradas do banco de dados.
 -->
             @foreach ($datas as $data)
             <td class="border border-slate-700 ... bg-slate-300">{{$data->name}}</td>
             <td class="border border-slate-700 ... bg-slate-300">{{$data->descriçao}}</td>
-            <td class="border border-slate-700 ... bg-slate-300">{{$data->preço}}</td> 
-            
+            <td class="border border-slate-700 ... bg-slate-300">{{$data->preço}}</td>             
             <tbody>
                 <td>
                     <form action="{{route('delete.delete',$data->id)}}" method="post"> 
@@ -73,8 +74,7 @@
                          <button type="submit" class="shadow-2xl ... outline outline-offset-2 outline-blue-800 px-3 ..." title="click 1 vez para atualizar o registro">
                             <font color="#100dbd">
                                 atualizar
-                            </font>
-                            
+                            </font>                            
                          </button>
                      </form>                
                  </td>
@@ -82,10 +82,8 @@
             
         </tbody>       
         @endforeach     
-    </table><br> 
-
-
-</div>
-
+    </table>
+    <br> 
+></div>
 </body>
 </html>

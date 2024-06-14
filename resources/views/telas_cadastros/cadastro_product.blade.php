@@ -13,7 +13,9 @@
     <div class="shadow-md ... bg-slate-600"> <!-- cor do titulo-->
         <h1 align="center"> <font color="white" size="10%"><b> CADASTRO DE PRODUTOS </b></font></h1> <!-- TITULO -->
     </div>
-<!--================================== ABAIXO OS ERROS DE FORMUALARIOS MAU PREENCHIDOS ==============================-->
+<!-- 
+    ABAIXO OS ERROS DE FORMUALARIOS MAU PREENCHIDOS
+-->
 
     @if($errors->any())
 
@@ -23,7 +25,9 @@
                 @endforeach
             </ul>
     @endif
-<!--================================== FORMULARIO DE CADASTRO ==============================-->
+<!--
+     FORMULARIO DE CADASTRO
+-->
         <div  align="center" class="shadow-md ... " ><!-- centraliza formulario -->
             
             <form action="{{route('cadastro.cadastro')}}" method="post" class="bg-slate-300">
@@ -62,7 +66,19 @@
                                             </b>
                                         </p>
                                     </font>
-                            </button> <br><br>
+                            </button> 
+<!--======================================= TEXTO INFORMATIVO====================================================================-->                           
+                            <h4 ><font color="red"><b>*</b></font> informe todos os valores dos campos abaixo
+                                    <ol>
+                                        <li>nome do produto</li>
+                                        <li>descrição</li>
+                                        <li>preço</li>
+                                        <li>categoria do produto</li>
+                                        <li>data de criação</li>
+                                        <li>data/hora de criação</li>
+                                    </ol>
+                                </h4>
+                            <br>
                 </div> <!-- fim do espaçamento entre inputs-->   
            </form><!-- FIM DO FORMULARIO -->
        

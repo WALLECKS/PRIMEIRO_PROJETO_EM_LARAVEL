@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+<!--
+passando a variavel para visualização
+de informações dentro de uma lista.
+-->
     <h1>detalhes</h1>
 
     <ul>

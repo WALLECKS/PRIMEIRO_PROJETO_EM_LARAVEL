@@ -12,7 +12,7 @@
     <div class="shadow-md ... bg-slate-600"> <!-- cor do titulo-->
         <h1 align="center"> <font size="10%" color="white" ><b> Lista de Categorias Cadastrados</b></font></h1> <!-- TITULO -->
     </div><br>
-<!----------------------------------------------------------------------------------------------------------------->
+
 <!--                    ABAIXO A LISTAGEM DE INFORMAÇOES DENTRO DE UMA TABELA
                        ATRIBUINDO ALGUMAS CLASSES DO TAILWINDCSS 
 -->
@@ -26,10 +26,12 @@
         </thead>     
         <tbody class="bg-slate-300">
 <!--
-    passando a variavel $category_models do controller para visualizaçao na view
+    passando a variavel $category_models do controller para visualizaçao na view, 
+    juntamente com o formulario de exclusao, atualizaçao e detalhes das informações
+    cadastradas no banco de dados.
 -->
 <form action="{{route('Cadastro_Categoria.Cadastro_Categoria')}}" method="GET">
-    <button type="submit"> cadastrar mais categorias </button>
+    <button type="submit" class="bg-indigo-500 opacity-70 ..."> <p class="font-mono ... border-4"> cadastrar mais categorias </p> </button>
 </form>         
 @foreach ($category_model as $data)
 
@@ -76,8 +78,9 @@
 </tbody>
 
 </tbody>       
-@endforeach   
-    </table><br> 
+@endforeach  
+
+</table><br> 
 
 
 </div>

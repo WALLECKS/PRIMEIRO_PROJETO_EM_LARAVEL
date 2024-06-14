@@ -10,8 +10,9 @@ use Illuminate\Http\Request;
 
 class ControllerTeste extends Controller
 {
-//========================================== ABAIXO AS ROTAS DE CADASTROS, LEITURA, ATUALIZAÇÃO E DELETE DOS PRODUTOS ==========================================
-
+/*
+ABAIXO AS ROTAS DE CADASTROS, LEITURA, ATUALIZAÇÃO E DELETE DOS PRODUTOS 
+*/
 // abaixo a funçao responsavel por encaminhar a view de registros de informaçoes
     public function registro(User $datas)
     {
@@ -71,8 +72,9 @@ class ControllerTeste extends Controller
         $datas->update($request->only(['name','descriçao','preço']));
         return redirect()->route('registro.registro');
     }    
-//========================================== ABAIXO AS ROTAS DE CADASTROS, LEITURA, ATUALIZAÇÃO E DELETE DA CATEGORIA DOS PRODUTOS ========================
-
+/*
+ ABAIXO AS ROTAS DE CADASTROS, LEITURA, ATUALIZAÇÃO E DELETE DA CATEGORIA DOS PRODUTOS
+*/
 // controller de direcionamento para view de cadastro de categorias de produtos
 public function Cadastro_Categoria()
 {

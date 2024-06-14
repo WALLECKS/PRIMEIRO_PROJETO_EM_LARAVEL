@@ -7,10 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Detalhes da Categoria de Produtos</h1>
-
+<!--
+passando a variavel para visualização
+de informações dentro de uma lista.
+-->
+<h1>Detalhes da Categoria de Produtos</h1>
     <ul>
-
         <li>Nome do produto: {{$category_model->name_category}}</li>   
         <li>id do produto: {{$category_model->id}}</li>
     </ul>
