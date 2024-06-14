@@ -21,12 +21,12 @@ class ControllerTeste extends Controller
     }
 
 // abaixo segue a rota responsavel por cadastras novas informaçoes no banco de dados
-    public function cadastro(ValidateControllerTeste $request) // injeçao de dependencias       
+    public function cadastro(Request $request) // injeçao de dependencias       
     { 
 
        $user= $request->all(); // recupera as informaçoes 
        
-       User::create($user)->only(['name','descriçao','preço']); // cria uma nova informaçao no banco de dados)
+       User::create($user)->only(['name','descriçao','preço','categoria']); // cria uma nova informaçao no banco de dados)
        
        return view('welcome');
     }
@@ -44,7 +44,7 @@ class ControllerTeste extends Controller
             return redirect()->view('lista_contatos.registros');
         }
         $registro->delete();
-        return view('welcome');
+        return redirect()->route('registro.registro');
     }
 // abaixo o controller que retorna os detalhes dos registros cadastrados  
     public function detalhes( string $id)
@@ -63,7 +63,7 @@ class ControllerTeste extends Controller
         return view('/telas_cadastros.updateproduct', compact('data'));
     }
 //controller de atualização de informaçoes dos produtos cadastrados
-    public function update(ValidateControllerTeste $request, string $id)
+    public function update(Request $request, string $id)
     {
         if(!$datas=User::find($id)){
             return redirect()->route('registro.registro');
@@ -84,7 +84,7 @@ public function Create_Category(ValidaçaoCadastroCategorias $request) {
     
        $category_models= $request->all(); // recupera as informaçoes 
        
-       CategoryModel::create($category_models)->only(['name']); // cria uma nova informaçao no banco de dados
+       CategoryModel::create($category_models)->only(['name_category']); // cria uma nova informaçao no banco de dados
        
        return view('welcome');
 }  

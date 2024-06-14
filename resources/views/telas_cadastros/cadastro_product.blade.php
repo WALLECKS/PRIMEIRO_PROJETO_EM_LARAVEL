@@ -44,7 +44,7 @@
 
                             <font color="#0c0a09"> <!-- cor do texto-->
                                 <font color="red">*</font><b>Categoria de Produtos:</b>
-                            </font><input type="text" name="categorias" placeholder="nome da categoria" class="border-2 border-rose-500 ..." size="15px"> 
+                            </font><input type="text" name="categoria" placeholder="nome da categoria" class="border-2 border-rose-500 ..." size="15px"> 
                            
                             <font color="#0c0a09"> <!-- cor do texto-->
                                 <font color="red">*</font><b>Data de Criaçao:</b>

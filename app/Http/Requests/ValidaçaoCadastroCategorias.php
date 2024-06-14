@@ -24,7 +24,7 @@ class ValidaçaoCadastroCategorias extends FormRequest
     public function rules()
     {
         return [
-          'categorias'=>[
+          'categoria'=>[
                 'required',
                 'min:5',
                 'max:20',

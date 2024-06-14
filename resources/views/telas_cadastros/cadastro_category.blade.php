@@ -32,7 +32,7 @@
                 <div class="space-y-12"> <!-- espaçamento entre inputs -->
                             <font color="#0c0a09"> <!-- cor do texto-->
                                <font color="red">*</font><b>Nome da Categoria:</b>
-                            </font><input type="text" name="name_category" class="border-2 border-rose-500 ..." placeholder="insira seu nome" size="30px">
+                            </font><input type="text" name="categoria" class="border-2 border-rose-500 ..." placeholder="insira seu nome" size="30px">
                             <font color="#0c0a09"> <!-- cor do texto-->
                             
                                 <font color="red">*</font><b>Data de Criação:</b>

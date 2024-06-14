@@ -35,7 +35,7 @@
 
     <td class="border border-slate-700 ... bg-slate-300">
         <div style="text-align:center">
-        {{$data->name_category}}
+        {{$data->categoria}}
         </div>
     </td>
 

@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name')->require;
             $table->string('descriçao')->nullable();
             $table->string('preço')->require;
-            $table->string('categorias')->require ;
+            $table->string('categoria')->require ;
             $table->timestamps();
             $table->rememberToken();
             

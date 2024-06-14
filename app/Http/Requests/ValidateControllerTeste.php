@@ -26,7 +26,7 @@ class ValidateControllerTeste extends FormRequest
         return [
             'name'=>[
                 'required',
-                'min:14',
+                'min:5',
                 'max:30',
                 'unique: user'
             ],
@@ -39,6 +39,11 @@ class ValidateControllerTeste extends FormRequest
                 'required',
                 'min:2',
                 'max:2',
+            ],
+            'categoria'=>[
+                'required',
+                'min:5',
+                'max:20',
             ],
             
         ];
