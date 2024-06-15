@@ -15,8 +15,7 @@ class CreateCategoryModelsTable extends Migration
     {
         Schema::create('category_models', function (Blueprint $table) {
             $table->id()->unique();
-            $table->string('categoria')->unique()->require;
-            
+            $table->string('categoria')->require;     
             $table->rememberToken();
             $table->timestamps();
         });
