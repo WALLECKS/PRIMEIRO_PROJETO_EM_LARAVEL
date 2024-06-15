@@ -40,12 +40,6 @@ class ValidateControllerTeste extends FormRequest
                 'min:2',
                 'max:2',
             ],
-            'categoria'=>[
-                'required',
-                'min:5',
-                'max:20',
-            ],
-            
         ];
     }
 }
