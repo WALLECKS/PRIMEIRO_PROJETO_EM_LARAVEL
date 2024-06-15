@@ -92,3 +92,43 @@ Você tem até **17/06/2024 às 08:00 horas** para completar este teste a partir
 Se você tiver qualquer dúvida durante o teste, sinta-se à vontade para entrar em contato conosco.
 
 Boa sorte! 🍀
+
+## =========================================== PARA MAIS INFORMAÇÕES SOBRE A DOCUMENTAÇAO ======================================================
+
+
+                                                Documentação do projeto de desenvolvimento
+                                                         teste-motocaSystems-backEnd
+
+
+1º Levando em consideração as boas práticas de programação, resolvi não versionar para o GitHub alguns arquivos por questão de segurança, pois alguns arquivos contem informações sensíveis como, nome do banco, usuário, senhas e arquivos de configuração do projeto, abaixo estão listado os arquivos incluídos no gitignore, um arquivo do Laravel onde eu incluo quais os arquivos que não será versionado no repositório.
+
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+
+3º O comando abaixo foi utilizado para subir o contêiner do banco PostgreSQL utilizado o docker para administrar os contêineres da aplicação, lembrando que para rodar o docker, é preciso ter ele instalado na maquina.
+
+docker run -p 5432:5432 --name PostgreSQL -e POSTGRES_PASSWORD=BANCO_teste123 -e POSTGRES_USER=WALLECKS -d postgres
+
+4º Ferramentas utilizadas para o desenvolvimento do projeto.
+
+* Docker version 20.10 gerenciar os contêiner
+* Banco de dados PostgreSQL para armazenar dos formulários
+* Framework Laravel v11.10 estrutura do projeto
+* GitHub versionamento
+* Dbeaver-ce 23.2.2 administrar o banco de dados
+* Laradock ambiente de desenvolvimento
+* Postman
+##
