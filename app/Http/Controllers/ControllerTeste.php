@@ -22,7 +22,7 @@ ABAIXO AS ROTAS DE CADASTROS, LEITURA, ATUALIZAÇÃO E DELETE DOS PRODUTOS
     }
 
 // abaixo segue a rota responsavel por cadastras novas informaçoes no banco de dados
-    public function cadastro(Request $request) // injeçao de dependencias       
+    public function cadastro(ValidateControllerTeste $request) // injeçao de dependencias       
     { 
 
        $user= $request->all(); // recupera as informaçoes 
@@ -64,7 +64,7 @@ ABAIXO AS ROTAS DE CADASTROS, LEITURA, ATUALIZAÇÃO E DELETE DOS PRODUTOS
         return view('/telas_cadastros.updateproduct', compact('data'));
     }
 //controller de atualização de informaçoes dos produtos cadastrados
-    public function update(Request $request, string $id)
+    public function update(ValidateControllerTeste $request, string $id)
     {
         if(!$datas=User::find($id)){
             return redirect()->route('registro.registro');
