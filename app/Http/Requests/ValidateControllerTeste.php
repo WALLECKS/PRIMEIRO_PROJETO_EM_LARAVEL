@@ -39,11 +39,8 @@ class ValidateControllerTeste extends FormRequest
                 'required',
                 'min:2',
                 'max:2',
-<<<<<<< HEAD
-            ], 
-=======
             ],
->>>>>>> 1645bb75c27b852a50a213a864641a8d45f78ea6
         ];
+        
     }
 }
